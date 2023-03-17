@@ -4,8 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="归档: 2022/5, Smile&#39;s Blog">
-    <meta name="description" content="Smile&#39;s Blog">
+    <meta name="keywords" content="css函数基本使用, Smile&#39;s Blog">
+    <meta name="description" content="
+
+css常用基本函数var()创建css变量
+12345--color:pink;.box&amp;#123;    color:var(--color);&amp;#125;
+
+rgb()定义颜色：参数为 (red,green,blue) 0-255&amp;">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +22,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>归档: 2022/5 | Smile&#39;s Blog</title>
+    <title>css函数基本使用 | Smile&#39;s Blog</title>
     <link rel="icon" type="image/png" href="/smileblog/favicon.png">
     
 
@@ -330,227 +335,459 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                Smile&#39;s Blog
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/smileblog/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "自律即自由，努力即幸运",
-                            
-                                "既然过了可以做梦的年纪，那我为何不早点醒来",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/smileblog/medias/featureimages/6.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">css函数基本使用</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/smileblog/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
-
-<main class="content">
+<main class="post-container content">
 
     
-    <div class="container archive-calendar">
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div id="post-calendar" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/smileblog/libs/echarts/echarts.min.js"></script>
-<script type="text/javascript">
-    let myChart = echarts.init(document.getElementById('post-calendar'));
-
-    
-
-    let option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#c6e48b', '#7bc96f', '#239a3b', '#196127']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: 'horizontal',
-            left: 'center',
-            bottom: 0
-        },
-        calendar: [{
-            left: 'center',
-            range: ["2022-03-17", "2023-03-17"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#196127',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2022-03-17", 0], ["2022-03-18", 0], ["2022-03-19", 0], ["2022-03-20", 0], ["2022-03-21", 0], ["2022-03-22", 0], ["2022-03-23", 0], ["2022-03-24", 0], ["2022-03-25", 0], ["2022-03-26", 0], ["2022-03-27", 0], ["2022-03-28", 0], ["2022-03-29", 0], ["2022-03-30", 0], ["2022-03-31", 0], ["2022-04-01", 0], ["2022-04-02", 0], ["2022-04-03", 0], ["2022-04-04", 0], ["2022-04-05", 0], ["2022-04-06", 0], ["2022-04-07", 0], ["2022-04-08", 0], ["2022-04-09", 0], ["2022-04-10", 0], ["2022-04-11", 0], ["2022-04-12", 0], ["2022-04-13", 0], ["2022-04-14", 0], ["2022-04-15", 0], ["2022-04-16", 0], ["2022-04-17", 0], ["2022-04-18", 0], ["2022-04-19", 0], ["2022-04-20", 0], ["2022-04-21", 0], ["2022-04-22", 0], ["2022-04-23", 0], ["2022-04-24", 0], ["2022-04-25", 0], ["2022-04-26", 0], ["2022-04-27", 0], ["2022-04-28", 1], ["2022-04-29", 0], ["2022-04-30", 0], ["2022-05-01", 0], ["2022-05-02", 0], ["2022-05-03", 0], ["2022-05-04", 0], ["2022-05-05", 0], ["2022-05-06", 0], ["2022-05-07", 0], ["2022-05-08", 0], ["2022-05-09", 0], ["2022-05-10", 0], ["2022-05-11", 0], ["2022-05-12", 0], ["2022-05-13", 0], ["2022-05-14", 0], ["2022-05-15", 0], ["2022-05-16", 0], ["2022-05-17", 0], ["2022-05-18", 0], ["2022-05-19", 0], ["2022-05-20", 0], ["2022-05-21", 0], ["2022-05-22", 0], ["2022-05-23", 0], ["2022-05-24", 0], ["2022-05-25", 0], ["2022-05-26", 0], ["2022-05-27", 0], ["2022-05-28", 1], ["2022-05-29", 0], ["2022-05-30", 0], ["2022-05-31", 0], ["2022-06-01", 0], ["2022-06-02", 0], ["2022-06-03", 0], ["2022-06-04", 0], ["2022-06-05", 0], ["2022-06-06", 0], ["2022-06-07", 0], ["2022-06-08", 0], ["2022-06-09", 0], ["2022-06-10", 0], ["2022-06-11", 0], ["2022-06-12", 0], ["2022-06-13", 0], ["2022-06-14", 0], ["2022-06-15", 0], ["2022-06-16", 0], ["2022-06-17", 0], ["2022-06-18", 0], ["2022-06-19", 0], ["2022-06-20", 0], ["2022-06-21", 0], ["2022-06-22", 0], ["2022-06-23", 0], ["2022-06-24", 0], ["2022-06-25", 0], ["2022-06-26", 0], ["2022-06-27", 0], ["2022-06-28", 0], ["2022-06-29", 0], ["2022-06-30", 0], ["2022-07-01", 0], ["2022-07-02", 0], ["2022-07-03", 0], ["2022-07-04", 0], ["2022-07-05", 0], ["2022-07-06", 0], ["2022-07-07", 0], ["2022-07-08", 0], ["2022-07-09", 0], ["2022-07-10", 0], ["2022-07-11", 0], ["2022-07-12", 0], ["2022-07-13", 0], ["2022-07-14", 0], ["2022-07-15", 0], ["2022-07-16", 0], ["2022-07-17", 0], ["2022-07-18", 0], ["2022-07-19", 0], ["2022-07-20", 0], ["2022-07-21", 0], ["2022-07-22", 0], ["2022-07-23", 0], ["2022-07-24", 0], ["2022-07-25", 0], ["2022-07-26", 0], ["2022-07-27", 0], ["2022-07-28", 0], ["2022-07-29", 0], ["2022-07-30", 0], ["2022-07-31", 0], ["2022-08-01", 0], ["2022-08-02", 0], ["2022-08-03", 0], ["2022-08-04", 0], ["2022-08-05", 0], ["2022-08-06", 0], ["2022-08-07", 0], ["2022-08-08", 0], ["2022-08-09", 0], ["2022-08-10", 0], ["2022-08-11", 0], ["2022-08-12", 0], ["2022-08-13", 0], ["2022-08-14", 0], ["2022-08-15", 0], ["2022-08-16", 0], ["2022-08-17", 0], ["2022-08-18", 0], ["2022-08-19", 0], ["2022-08-20", 0], ["2022-08-21", 0], ["2022-08-22", 0], ["2022-08-23", 0], ["2022-08-24", 0], ["2022-08-25", 0], ["2022-08-26", 0], ["2022-08-27", 0], ["2022-08-28", 0], ["2022-08-29", 0], ["2022-08-30", 0], ["2022-08-31", 0], ["2022-09-01", 0], ["2022-09-02", 0], ["2022-09-03", 0], ["2022-09-04", 0], ["2022-09-05", 0], ["2022-09-06", 0], ["2022-09-07", 0], ["2022-09-08", 0], ["2022-09-09", 0], ["2022-09-10", 0], ["2022-09-11", 0], ["2022-09-12", 0], ["2022-09-13", 0], ["2022-09-14", 0], ["2022-09-15", 0], ["2022-09-16", 0], ["2022-09-17", 0], ["2022-09-18", 0], ["2022-09-19", 0], ["2022-09-20", 0], ["2022-09-21", 0], ["2022-09-22", 0], ["2022-09-23", 0], ["2022-09-24", 0], ["2022-09-25", 0], ["2022-09-26", 0], ["2022-09-27", 0], ["2022-09-28", 0], ["2022-09-29", 0], ["2022-09-30", 0], ["2022-10-01", 0], ["2022-10-02", 0], ["2022-10-03", 0], ["2022-10-04", 0], ["2022-10-05", 0], ["2022-10-06", 0], ["2022-10-07", 0], ["2022-10-08", 0], ["2022-10-09", 0], ["2022-10-10", 0], ["2022-10-11", 0], ["2022-10-12", 0], ["2022-10-13", 0], ["2022-10-14", 0], ["2022-10-15", 0], ["2022-10-16", 0], ["2022-10-17", 0], ["2022-10-18", 0], ["2022-10-19", 0], ["2022-10-20", 0], ["2022-10-21", 0], ["2022-10-22", 0], ["2022-10-23", 0], ["2022-10-24", 0], ["2022-10-25", 0], ["2022-10-26", 0], ["2022-10-27", 0], ["2022-10-28", 0], ["2022-10-29", 0], ["2022-10-30", 0], ["2022-10-31", 0], ["2022-11-01", 0], ["2022-11-02", 0], ["2022-11-03", 0], ["2022-11-04", 0], ["2022-11-05", 0], ["2022-11-06", 0], ["2022-11-07", 0], ["2022-11-08", 0], ["2022-11-09", 0], ["2022-11-10", 0], ["2022-11-11", 0], ["2022-11-12", 0], ["2022-11-13", 0], ["2022-11-14", 0], ["2022-11-15", 0], ["2022-11-16", 0], ["2022-11-17", 0], ["2022-11-18", 0], ["2022-11-19", 0], ["2022-11-20", 0], ["2022-11-21", 0], ["2022-11-22", 0], ["2022-11-23", 0], ["2022-11-24", 0], ["2022-11-25", 0], ["2022-11-26", 0], ["2022-11-27", 0], ["2022-11-28", 0], ["2022-11-29", 0], ["2022-11-30", 0], ["2022-12-01", 0], ["2022-12-02", 0], ["2022-12-03", 0], ["2022-12-04", 0], ["2022-12-05", 0], ["2022-12-06", 0], ["2022-12-07", 0], ["2022-12-08", 0], ["2022-12-09", 0], ["2022-12-10", 0], ["2022-12-11", 0], ["2022-12-12", 0], ["2022-12-13", 0], ["2022-12-14", 0], ["2022-12-15", 0], ["2022-12-16", 0], ["2022-12-17", 0], ["2022-12-18", 0], ["2022-12-19", 0], ["2022-12-20", 0], ["2022-12-21", 0], ["2022-12-22", 0], ["2022-12-23", 0], ["2022-12-24", 0], ["2022-12-25", 0], ["2022-12-26", 0], ["2022-12-27", 0], ["2022-12-28", 0], ["2022-12-29", 0], ["2022-12-30", 0], ["2022-12-31", 0], ["2023-01-01", 0], ["2023-01-02", 0], ["2023-01-03", 0], ["2023-01-04", 0], ["2023-01-05", 0], ["2023-01-06", 0], ["2023-01-07", 0], ["2023-01-08", 0], ["2023-01-09", 0], ["2023-01-10", 0], ["2023-01-11", 0], ["2023-01-12", 0], ["2023-01-13", 0], ["2023-01-14", 0], ["2023-01-15", 0], ["2023-01-16", 0], ["2023-01-17", 0], ["2023-01-18", 0], ["2023-01-19", 0], ["2023-01-20", 0], ["2023-01-21", 0], ["2023-01-22", 0], ["2023-01-23", 0], ["2023-01-24", 0], ["2023-01-25", 0], ["2023-01-26", 0], ["2023-01-27", 0], ["2023-01-28", 1], ["2023-01-29", 0], ["2023-01-30", 0], ["2023-01-31", 0], ["2023-02-01", 0], ["2023-02-02", 0], ["2023-02-03", 0], ["2023-02-04", 0], ["2023-02-05", 0], ["2023-02-06", 0], ["2023-02-07", 0], ["2023-02-08", 0], ["2023-02-09", 0], ["2023-02-10", 0], ["2023-02-11", 0], ["2023-02-12", 0], ["2023-02-13", 0], ["2023-02-14", 0], ["2023-02-15", 0], ["2023-02-16", 0], ["2023-02-17", 0], ["2023-02-18", 0], ["2023-02-19", 0], ["2023-02-20", 0], ["2023-02-21", 0], ["2023-02-22", 0], ["2023-02-23", 0], ["2023-02-24", 0], ["2023-02-25", 0], ["2023-02-26", 0], ["2023-02-27", 0], ["2023-02-28", 0], ["2023-03-01", 0], ["2023-03-02", 0], ["2023-03-03", 0], ["2023-03-04", 0], ["2023-03-05", 0], ["2023-03-06", 0], ["2023-03-07", 0], ["2023-03-08", 0], ["2023-03-09", 0], ["2023-03-10", 0], ["2023-03-11", 0], ["2023-03-12", 2], ["2023-03-13", 0], ["2023-03-14", 2], ["2023-03-15", 3], ["2023-03-16", 0], ["2023-03-17", 0]]
-        }]
-
-    };
-
-    myChart.setOption(option);
-</script>
-
-    
-
-    
-
-    <div id="cd-timeline" class="container">
-        
-        <div class="cd-timeline-block">
-
-            
-            
-            
-            <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="/smileblog/archives/2022">2022</a>
-            </div>
-            
-
-            
-            
-            
-            <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="/smileblog/archives/2022/05">05</a>
-            </div>
-            
-
-            
-            <div class="cd-timeline-img day" data-aos="zoom-in-up">
-                <span>28</span>
-            </div>
-            <article class="cd-timeline-content" data-aos="fade-up">
-                <div class="article col s12 m6">
-                    <div class="card">
-                        <a href="/smileblog/2022/05/28/vue%E9%A1%B9%E7%9B%AE%E4%BD%BF%E7%94%A8swiper%E6%8F%92%E4%BB%B6/">
-                            <div class="card-image">
-                                
-                                <img src="/smileblog/medias/featureimages/1.jpg" class="responsive-img" alt="Vue2中使用swiper插件">
-                                
-                                <span class="card-title">Vue2中使用swiper插件</span>
-                            </div>
-                        </a>
-                        <div class="card-content article-content">
-                            <div class="summary block-with-text">
-                                
-                                    
-
-vue2中使用swiper插件官方文档：Swiper Vue.js Components (swiperjs.com)
-1、安装插件
-1npm install swiper  vue-awesome-swiper@3.1.3  --sa
-                                
-                            </div>
-                            <div class="publish-info">
-                                <span class="publish-date">
-                                    <i class="far fa-clock fa-fw icon-date"></i>2022-05-28
-                                </span>
-                                <span class="publish-author">
-                                    
-                                    <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                    
-                                    <a href="/smileblog/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
-                                    前端
-                                    </a>
-                                    
-                                    <a href="/smileblog/categories/%E5%89%8D%E7%AB%AF/Vue/" class="post-category">
-                                    Vue
-                                    </a>
-                                    
-                                    
-                                </span>
-                            </div>
-                        </div>
-
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
                         
-                        <div class="card-action article-tags">
-                            
-                            <a href="/smileblog/tags/Vue/"><span class="chip bg-color">Vue</span></a>
-                            
-                            <a href="/smileblog/tags/Vue2/"><span class="chip bg-color">Vue2</span></a>
-                            
-                            <a href="/smileblog/tags/Swiper/"><span class="chip bg-color">Swiper</span></a>
-                            
-                        </div>
+                            <a href="/smileblog/tags/css/">
+                                <span class="chip bg-color">css</span>
+                            </a>
                         
                     </div>
+                    
                 </div>
-            </article>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/smileblog/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                前端
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2023-03-15
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1923184888&auto=1&height=66"></iframe>
+
+<h1 id="css常用基本函数"><a href="#css常用基本函数" class="headerlink" title="css常用基本函数"></a>css常用基本函数</h1><h2 id="var"><a href="#var" class="headerlink" title="var()"></a>var()</h2><p>创建css变量</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">--color</span>:pink;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:<span class="built_in">var</span>(--color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="rgb"><a href="#rgb" class="headerlink" title="rgb()"></a>rgb()</h2><p>定义颜色：参数为 (red,green,blue) 0-255&#x2F;0%-100%之间的值</p>
+<h2 id="rgba"><a href="#rgba" class="headerlink" title="rgba()"></a>rgba()</h2><p>定义颜色并设置透明度：参数为 (red,green,blue,alpha) alpha值为0-1</p>
+<h2 id="attr"><a href="#attr" class="headerlink" title="attr()"></a>attr()</h2><p>访问元素属性的值，标签中 添加 data-自定名&#x3D;”值” ，可接收三个参数：属性名、类型和默认值。</p>
+<p>语法：attr(attribute-name?[,]?)</p>
+<p>例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;main&quot;</span> <span class="attr">data-color</span>=<span class="string">&quot;pink&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:<span class="built_in">attr</span>(data-color);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="calc"><a href="#calc" class="headerlink" title="calc()"></a>calc()</h2><p>对css属性值进行计算</p>
+<p>支持加减乘除，+ 和 - 俩边必须有空白字符</p>
+<p>用于计算元素宽高，达到自适应效果</p>
+<h2 id="max"><a href="#max" class="headerlink" title="max()"></a>max()</h2><p>需要两个值并使用该 CSS 属性的最大值。这对于制作响应式宽度和高度很有用。</p>
+<p>例：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>:<span class="built_in">max</span>(<span class="number">50%</span> , <span class="number">500px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这种情况下，div 将具有最大可能的宽度，如果 50% 大于 500px，则其宽度将为 50%，否则为 500px。</p>
+<h2 id="min"><a href="#min" class="headerlink" title="min()"></a>min()</h2><p>需要两个值并使用该 CSS 属性的最小值。这与 max() 正好相反。</p>
+<p>例:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span>&#123;</span><br><span class="line">    <span class="attribute">height</span>:<span class="built_in">min</span>(<span class="number">50%</span> , <span class="number">500px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="blur"><a href="#blur" class="headerlink" title="blur()"></a>blur()</h2><p>毛玻璃(高斯模糊)效果，可应用于图片或元素</p>
+<ul>
+<li><p>filter: 将模糊或颜色偏移等图形效果应用于元素</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">5px</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>backdrop-filter:为元素后面的区域添加模糊或者其他效果</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">backdrop-<span class="attribute">filter</span>: <span class="built_in">blur</span>(<span class="number">10px</span>);</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="gradient"><a href="#gradient" class="headerlink" title="gradient()"></a>gradient()</h2><p><gradient> 是一种<image>CSS数据类型的子类型，用于表现两种或多种颜色的过渡转变。</p>
+<p>CSS的<image>数据类型描述的是2D图形：比如background-image、list-style-image、border-image、content等， <image>常见的方式是通过url来引入一个图片资源；它也可以通过CSS的 函数来设置颜色的渐变。</p>
+<p><gradient>常见的函数实现有下面几种：</p>
+<p>1、linear-gradient()：创建一个表示两种或多种颜色线性渐变的图片</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(red, blue);</span><br></pre></td></tr></table></figure>
+
+<p>2、radial-gradient()：创建了一个图像，该图像是由从原点发出的两种或者多种颜色之间的逐步过渡组成</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 中心向四周渐变 */</span></span><br><span class="line"> <span class="comment">/* background-image: radial-gradient(red, blue); */</span></span><br><span class="line"> <span class="comment">/* 改变方向 */</span></span><br><span class="line"> <span class="attribute">background-image</span>: <span class="built_in">radial-gradient</span>(at <span class="number">0%</span> <span class="number">50%</span>, red, blue);</span><br></pre></td></tr></table></figure>
+
+<p>3、repeating-linear-gradient()：创建一个由重复线性渐变组成的<code>&lt;image&gt;</code></p>
+<p>4、repeating-radial-gradient()：创建一个重复的原点触发渐变组成的<code>&lt;image&gt;</code></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/smileblog/tags/css/">
+                                    <span class="chip bg-color">css</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/smileblog/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/smileblog/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">感谢观看</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/smileblog/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/smileblog/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/smileblog/2023/03/15/css%E5%8D%95%E4%BD%8D/">
+                    <div class="card-image">
+                        
+                        <img src="/smileblog/medias/featureimages/12.jpg" class="responsive-img" alt="css单位">
+                        
+                        <span class="card-title">css单位</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-03-15
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/smileblog/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/smileblog/tags/css/">
+                        <span class="chip bg-color">css</span>
+                    </a>
+                    
+                    <a href="/smileblog/tags/em-rem/">
+                        <span class="chip bg-color">em/rem</span>
+                    </a>
+                    
+                    <a href="/smileblog/tags/vw-vh/">
+                        <span class="chip bg-color">vw/vh</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/smileblog/2023/03/14/iphonex%E7%AD%89%E7%A7%BB%E5%8A%A8%E7%AB%AF%E8%AE%BE%E5%A4%87%E5%BA%95%E9%83%A8%E5%AE%89%E5%85%A8%E5%8C%BA%E5%9F%9F%E9%80%82%E9%85%8D/">
+                    <div class="card-image">
+                        
+                        <img src="/smileblog/medias/featureimages/11.jpg" class="responsive-img" alt="Iphone X 等移动端设备底部安全区域适配">
+                        
+                        <span class="card-title">Iphone X 等移动端设备底部安全区域适配</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-03-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/smileblog/categories/%E5%89%8D%E7%AB%AF/" class="post-category">
+                                    前端
+                                </a>
+                            
+                            <a href="/smileblog/categories/%E5%89%8D%E7%AB%AF/%E7%A7%BB%E5%8A%A8%E7%AB%AF/" class="post-category">
+                                    移动端
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/smileblog/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/">
+                        <span class="chip bg-color">移动端</span>
+                    </a>
+                    
+                    <a href="/smileblog/tags/%E9%80%82%E9%85%8D/">
+                        <span class="chip bg-color">适配</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
         </div>
         
     </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/smileblog/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/smileblog/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/smileblog/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/smileblog/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/smileblog/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
 
 </main>
 
